@@ -11,7 +11,7 @@ The biggest obstacle to adoption of these practices is the AWS documentation; it
 * encee.py -- encee python script - to read the JSON returned by the AWS STS request
 
 ## Setup
-1 **It is assumed that you have already downloaded the AWS CLI, have downloaded your IAM User Credentials, and have already run AWS CONFIGURE to get your environment set up. DO THAT FIRST!**
+1. **It is assumed that you have already downloaded the AWS CLI, have downloaded your IAM User Credentials, and have already run AWS CONFIGURE to get your environment set up. DO THAT FIRST!**
 1. Restriction policies are created on the AWS account, manually or with config.sh
     * You can optionally have a new group named 'encee' added to your AWS account, and the included policies will be applied automatically to the newly created group. The policies are not in effect until users are added to the encee group.
 1. Ensure that MFA is enabled for every IAM user account that you want to secure. It's best practices. Once the **MFA Required** policy is applied, IAM users without MFA will not be able to use AWS CLI.
