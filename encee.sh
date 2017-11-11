@@ -72,8 +72,18 @@ fi
 echo "Fetching temporary credentials from AWS STS..."
 aws sts get-session-token --serial-number $MFA_ARN --duration-seconds $VALID_SECONDS --token-code $TOKEN_CODE > token.json
 
+if [ $? -ne 0 ]; then
+	echo "There was an error while requesting credentials from AWS. Unable to continue."
+	return 2> /dev/null
+fi
+
 echo "Parsing JSON..."
 python encee.py > temp.tmp
+
+if [ $? -eq 1 ]; then
+	echo "Unable to parse token.json. Unable to continue."
+	return 2> /dev/null
+fi
 
 echo "Setting enviroment variables..."
 
