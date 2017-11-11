@@ -1,6 +1,7 @@
 # encee
 ## Background
 After reading about a number of incidents related to AWS and the theft of credentials, I wanted to make a utility that makes it easier (and therefore more likely) for users to require MFA for CLI so that theft of user credentials doesn't result in fraudulent charges to one's AWS account.
+
 There are two major obstacles to wider adoption of MFA for CLI or SDK as a regular practice. First is the AWS documentation; it is incomplete and frustratingly inaccurate. Second is the number of steps required to persist temporary credentials so that they can be used for the duration of a session; it's too complicated, so therefore, no one uses it. Encee is the solution to both.
 
 ## What is Encee?
