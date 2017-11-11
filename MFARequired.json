@@ -5,5 +5,5 @@
     "Action": "*",
     "Resource": "*",
     "Condition" : { "BoolIfExists" : { "aws:MultiFactorAuthPresent" : false } }
-	}
+  }
 }
