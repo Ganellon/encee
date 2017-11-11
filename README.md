@@ -4,8 +4,8 @@ After reading about a number of incidents related to AWS and the theft of creden
 The biggest obstacle to adoption of these practices is the AWS documentation; it is incomplete and inaccurate. After some hair pulling, I finally got things working and want to share these discoveries with others.
 
 ## Solution Files
-* IPRestriction.json -- IP / CIDR Restriction Policy JSON doc for AWS
-* MFARequired.json -- MFA Requirement Policy JSON doc for AWS
+* IPRestriction.json -- IP / CIDR Restriction Policy doc for AWS
+* MFARequired.json -- MFA Requirement Policy doc for AWS
 * config.sh -- bash script to automate some of the setup process (optional)
 * encee.sh -- encee bash script - to make environment variable changes that persist in the shell
 * encee.py -- encee python script - to read the JSON returned by the AWS STS request
