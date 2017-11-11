@@ -1,4 +1,4 @@
-# noob-cop
+# encee
 ## Background
 After reading about a number of incidents related to AWS and the theft of credentials, I wanted to make a utility that makes it easier (and therefore more likely) for users to require MFA for CLI so that theft of user credentials doesn't result in fraudulent charges to one's AWS account.
 The biggest obstacle to adoption of these practices is the AWS documentation; it is incomplete and inaccurate. After some hair pulling, I finally got things working and want to share these discoveries with others.
