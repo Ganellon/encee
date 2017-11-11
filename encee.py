@@ -1,6 +1,7 @@
 import json
 
 
+# function to test whether the token.json file was created
 def filetest():
     try:
         f = open('token.json')
@@ -10,9 +11,11 @@ def filetest():
         return 2
 
 
+# call the filetest() function
 file_exists = filetest()
 
 
+# only run this if the token.json exists, otherwise bail with error code
 if file_exists == 1:
     try:
         with open('token.json', 'r') as file:

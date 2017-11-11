@@ -69,30 +69,35 @@ if [ ${#TOKEN_CODE} -ne 6 ]; then
 	return 2> /dev/null
 fi
 
+# make the call to AWS STS to request temporary credentials
 echo "Fetching temporary credentials from AWS STS..."
 aws sts get-session-token --serial-number $MFA_ARN --duration-seconds $VALID_SECONDS --token-code $TOKEN_CODE > token.json
 
+# check the return code from the AWS STS call; 0 = success
 if [ $? -ne 0 ]; then
 	echo "There was an error while requesting credentials from AWS. Unable to continue."
 	return 2> /dev/null
 fi
 
+# parse the returned JSON to retreive the values
 echo "Parsing JSON..."
 python encee.py > temp.tmp
 
+# check the return code from encee.py; 0 = success, 1 = fail
 if [ $? -eq 1 ]; then
 	echo "Unable to parse token.json. Unable to continue."
 	return 2> /dev/null
 fi
 
-echo "Setting enviroment variables..."
-
 # read all the rows in the temp.tmp and export them to environment variables
+echo "Setting enviroment variables..."
 while read TEMP
 do
 	export "$TEMP"
+	echo "$TEMP"
 done < temp.tmp
 
+# remove the temporary files
 echo "Cleaning up temporary files..."
 rm token.json
 rm temp.tmp
