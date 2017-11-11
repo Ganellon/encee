@@ -4,6 +4,10 @@
     "Effect": "Deny",
     "Action": "*",
     "Resource": "*",
-    "Condition" : { "BoolIfExists" : { "aws:MultiFactorAuthPresent" : false } }
-  }
+    "Condition" : {
+    	"BoolIfExists" : { 
+    		"aws:MultiFactorAuthPresent" : false
+    	}
+    }
+	}
 }
