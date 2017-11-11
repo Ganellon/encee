@@ -7,8 +7,8 @@ The biggest obstacle to adoption of these practices is the AWS documentation; it
 * IP / CIDR Restriction Policy JSON doc for AWS
 * MFA Requirement Policy JSON doc for AWS
 * encee config file - to store the ARN of your MFA device
-* encee bash script - to make OS environment changes that persist in the shell
-* encee python script - to read the JSON returned by the AWS STS request
+* encee.sh -- encee bash script - to make environment variable changes that persist in the shell
+* encee.py -- encee python script - to read the JSON returned by the AWS STS request
 
 ## Setup
 1. Restriction policies are created on the AWS account, manually or with encee config
