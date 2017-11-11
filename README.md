@@ -22,7 +22,8 @@ The biggest obstacle to adoption of these practices is the AWS documentation; it
 1. Run the encee config python script to persist your MFA ARN in ~/.encee/config, or manually edit the file and paste the ARN of the MFA device for the user.
 
 ## Usage
-1. `source encee.sh` provide your MFA token and desired validity duration when prompted
+1. `source encee.sh`
+1. Follow the prompts to provide your desired validity duration and MFA Token when prompted
 
 ## How it works
 1. encee.sh bash script requests temp credentials from AWS STS; you specify validity duration in seconds
