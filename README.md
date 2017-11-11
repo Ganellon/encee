@@ -1,7 +1,10 @@
 # encee
 ## Background
 After reading about a number of incidents related to AWS and the theft of credentials, I wanted to make a utility that makes it easier (and therefore more likely) for users to require MFA for CLI so that theft of user credentials doesn't result in fraudulent charges to one's AWS account.
-The biggest obstacle to adoption of these practices is the AWS documentation; it is incomplete and inaccurate. After some hair pulling, I finally got things working and want to share these discoveries with others.
+There are two major obstacles to wider adoption of MFA for CLI or SDK as a regular practice. First is the AWS documentation; it is incomplete and frustratingly inaccurate. Second is the number of steps required to persist temporary credentials so that they can be used for the duration of a session; it's too complicated, so therefore, no one uses it. Encee is the solution to both.
+
+## What is Encee?
+It's a name from the concatenation of letters "N" and "C" for "Noob Cop". No one wants to be thought of as a noob, but we all make simple mistakes; Encee ensures that simple mistakes don't become costly catastrophes.
 
 ## Solution Files
 * IPRestriction.json -- IP / CIDR Restriction Policy doc for AWS
