@@ -16,7 +16,7 @@ The biggest obstacle to adoption of these practices is the AWS documentation; it
 1. Ensure that MFA is enabled for every IAM user account that you want to secure. It's best practices, and without it, once the policy is applied, users without MFA will not be able to use AWS CLI.
 1. Manually add AWS IAM User accounts to the 'encee' group (or whatever group you created).
 1. Manually edit the IP Restriction Policy to reflect your IP address or CIDR block. All others are denied.
-    * NOTE: This takes effect immediately! If the IP or CIDR you supply is incorrect, you will need to login with your root credentials to make corrections to the IPRestriction Policy.
+    * NOTE: This takes effect immediately! If the IP or CIDR you supply is incorrect, you will need to login to the AWS Console with your root credentials to make corrections to the IPRestriction Policy.
 1. Copy the arn of the MFA device you intend to use.
 1. Run the encee config python script to persist your MFA ARN in ~/.encee/config, or manually edit the file and paste the ARN of the MFA device for the user.
 
