@@ -4,9 +4,6 @@ After reading about a number of incidents related to AWS and the theft of creden
 
 There are two major obstacles to wider adoption of MFA for CLI or SDK as a regular practice. First is the AWS documentation; it is incomplete and frustratingly inaccurate. Second is the number of steps required to persist temporary credentials so that they can be used for the duration of a session; it's too complicated, so therefore, no one uses it. Encee is the solution to both.
 
-## What is Encee?
-Encee is the concatenation of letters "N" and "C" for "Noob Cop". No one wants to be thought of as a noob, but we all make simple mistakes; Encee ensures that simple mistakes don't become costly catastrophes. The project needed a name, and Encee is easier on the ego than Noob Cop.
-
 ## Solution Files
 * IPRestriction.json -- IP / CIDR Restriction Policy doc for AWS
 * MFARequired.json -- MFA Requirement Policy doc for AWS
